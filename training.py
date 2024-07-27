@@ -2,12 +2,14 @@ import glob
 from ultralytics import YOLO
 import torch
 
+from config import YOLO_DATASET
+
 if __name__=='__main__':
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     #model = YOLO("../runs/detect/train/weights/best.pt")
     model = YOLO("yolov8m.yaml")
     results = model.train(
-        data="./data.yaml",  
+        data=f"{YOLO_DATASET}/dataset.yaml",  
         device=device,
         batch=0.8,
         patience=20,

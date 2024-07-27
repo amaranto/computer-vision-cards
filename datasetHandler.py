@@ -135,7 +135,7 @@ print("Creating YOLO dataset...")
 for k,d in yolo_ds_dirs.items():
     os.makedirs(d, exist_ok=True)
 
-with open(f'{YOLO_DATASET}/data.yaml', 'w') as outfile:
+with open(f'{YOLO_DATASET}/dataset.yaml', 'w') as outfile:
     yaml.dump(yolo_ds_config, outfile, default_flow_style=False)
 
 with open(f'{YOLO_DATASET}/classes.txt', 'w') as outfile:
