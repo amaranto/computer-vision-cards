@@ -1,7 +1,0 @@
-perspective: 0.001
-degrees: 0.3
-mixup: 0.0
-bgr: 0.0
-copy_paste: 0.0
-shear: 0.2
-mosaic: 0.0
