@@ -11,7 +11,7 @@ if __name__=='__main__':
     results = model.train(
         data=f"{YOLO_DATASET}/dataset.yaml",  
         device=device,
-        batch=0.8,
+        batch=0.9,
         patience=20,
         save=True, 
         resume=False,
