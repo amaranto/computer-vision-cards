@@ -1,4 +1,4 @@
-path: /content/drive/MyDrive/TUIA/CV/2024_01/2024-01_trabajo_final/data/evaluation/240630_eval_ds_00
+
 train: ./images/train/
 val: ./images/val/
 names:
