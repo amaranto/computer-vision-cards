@@ -1,3 +1,4 @@
+import random
 import fiftyone as fo
 from fiftyone import types
 from config import yolo_ds_config, YOLO_DATASET,FIFTY_ONE_DATASET
@@ -10,8 +11,7 @@ dataset = fo.Dataset.from_dir(
     dataset_dir=dataset_dir,
     dataset_type=dataset_type,
 )
-print(dataset)
 
-print(dataset.head())
+print(f"Dataset length: {len(dataset)}")
 
-dataset.draw_labels(FIFTY_ONE_DATASET,  overwrite=True)
+dataset.take(10).draw_labels(FIFTY_ONE_DATASET,  overwrite=True)

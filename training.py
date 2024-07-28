@@ -40,21 +40,3 @@ if __name__=='__main__':
 
     
     results = model.val()
-    
-    success = model.export(path="yolov8mTruco.pt")
-
-    pictures = glob.glob("./datasets/custom/*")
-    print (pictures)
-    
-    for picture in pictures:
-        filename = picture.split("/")[-1]
-        results = model(picture)  
-        for result in results:
-            boxes = result.boxes
-            masks = result.masks
-            keypoints = result.keypoints
-            probs = result.probs
-            obb = result.obb
-            result.show()
-            result.save(filename=f"./datasets/results/{filename}")
-        
